@@ -1,5 +1,7 @@
 package com.nitzsch.algorithm;
 
+import java.util.Arrays;
+
 /**
  * 动态数组
  *
@@ -32,6 +34,43 @@ public class DynamicArray {
         return arr.length;
     }
 
+    public void add(int value) {
+        // 需要的容量
+        int needCapacity = size() + 1;
+        // 扩容
+        if (needGrow(needCapacity)) {
+            grow();
+        }
+        // 追加元素
+        arr[size++] = value;
+    }
+
+    private boolean needGrow(int needCapacity) {
+        int capacity = capacity();
+        if (needCapacity > capacity) {
+            return true;
+        }
+        return false;
+    }
+
+    private void grow() {
+        // 执行扩容
+        int capacity = capacity();
+        int capacityAfterGrow = capacity * 2;
+        int[] newArr = doGrow_v1(capacityAfterGrow);
+        // 使用 JDK 编写的 native 函数
+//        int[] newArr = Arrays.copyOf(arr, capacityAfterGrow);
+        arr = newArr;
+    }
+
+    private int[] doGrow_v1(int capacityAfterGrow) {
+        int[] newArr = new int[capacityAfterGrow];
+        for (int i = 0; i < arr.length; i++) {
+            newArr[i] = arr[i];
+        }
+        return newArr;
+    }
+
     public void set(int index, int value) {
         if (index >= this.size) {
             throw new IndexOutOfBoundsException(outOfBoundsMsg(index));
@@ -41,21 +80,5 @@ public class DynamicArray {
 
     private String outOfBoundsMsg(int index) {
         return "Index: " + index + ", Size: " + size;
-    }
-
-    public void add(int value) {
-        // todo 对比 ArrayList 的扩容方法
-        // 判断是否需要扩容，如果元素数量已经等于最大容量，则执行扩容（也可以优化成到达一定百分比时扩容）
-        int capacityNow = capacity();
-        if (size() == capacityNow) {
-            // 执行扩容
-            int[] newArr = new int[capacityNow * 2];
-            for (int i = 0; i < capacityNow; i++) {
-                newArr[i] = arr[i];
-            }
-            arr = newArr;
-        }
-        // 扩容完毕/无需扩容，则追加元素
-        arr[size++] = value;
     }
 }

@@ -3,12 +3,28 @@ package com.nitzsch.algorithm.test;
 import com.nitzsch.algorithm.DynamicArray;
 import sun.jvm.hotspot.utilities.Assert;
 
+import java.util.ArrayList;
+
 /**
  * @author: nitzschhong
  * @create: 2022-02-04 11:45
  */
 public class DynamicArrayTest {
     public static void main(String[] args) {
+        testDynamicArray_1();
+        testArrayList_1();
+    }
+
+    private static void testArrayList_1() {
+        ArrayList arrayList = new ArrayList(4);
+        arrayList.add(0);
+        arrayList.add(1);
+        arrayList.add(2);
+        arrayList.add(3);
+        arrayList.add(4);
+    }
+
+    private static void testDynamicArray_1() {
         DynamicArray dynamicArray = new DynamicArray(4);
         assert dynamicArray.size() == 0;
         assert dynamicArray.capacity() == 4;
