@@ -1,7 +1,6 @@
 package com.nitzsch.algorithm.test;
 
 import com.nitzsch.algorithm.DynamicArray;
-import sun.jvm.hotspot.utilities.Assert;
 
 import java.util.ArrayList;
 
@@ -26,16 +25,16 @@ public class DynamicArrayTest {
 
     private static void testDynamicArray_1() {
         DynamicArray dynamicArray = new DynamicArray(4);
-        assert dynamicArray.size() == 0;
+        assert dynamicArray.count() == 0;
         assert dynamicArray.capacity() == 4;
         dynamicArray.add(0);
-        assert dynamicArray.size() == 1;
+        assert dynamicArray.count() == 1;
         assert dynamicArray.capacity() == 4;
         dynamicArray.add(1);
         dynamicArray.add(2);
         dynamicArray.add(3);
         dynamicArray.add(4);
-        assert dynamicArray.size() == 5;
+        assert dynamicArray.count() == 5;
         assert dynamicArray.capacity() == 8;
     }
 }

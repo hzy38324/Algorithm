@@ -1,7 +1,5 @@
 package com.nitzsch.algorithm;
 
-import java.util.Arrays;
-
 /**
  * 动态数组
  *
@@ -12,7 +10,7 @@ public class DynamicArray {
 
     private int[] arr;
 
-    private int size;
+    private int count;
 
     public DynamicArray() {
         arr = new int[4];
@@ -26,8 +24,8 @@ public class DynamicArray {
         return arr[index];
     }
 
-    public int size() {
-        return this.size;
+    public int count() {
+        return this.count;
     }
 
     public int capacity() {
@@ -36,13 +34,13 @@ public class DynamicArray {
 
     public void add(int value) {
         // 需要的容量
-        int needCapacity = size() + 1;
+        int needCapacity = count() + 1;
         // 扩容
         if (needGrow(needCapacity)) {
             grow();
         }
         // 追加元素
-        arr[size++] = value;
+        arr[count++] = value;
     }
 
     private boolean needGrow(int needCapacity) {
@@ -72,13 +70,13 @@ public class DynamicArray {
     }
 
     public void set(int index, int value) {
-        if (index >= this.size) {
+        if (index >= this.count) {
             throw new IndexOutOfBoundsException(outOfBoundsMsg(index));
         }
         arr[index] = value;
     }
 
     private String outOfBoundsMsg(int index) {
-        return "Index: " + index + ", Size: " + size;
+        return "Index: " + index + ", Size: " + count;
     }
 }
