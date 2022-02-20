@@ -4,22 +4,22 @@ import java.util.ArrayDeque;
 import java.util.Stack;
 
 /**
- * 自己实现的栈
+ * 基于数组实现的栈
  * JDK 实现：
  * @see ArrayDeque 推荐
  * @see Stack JDK已经不推荐使用，见该类的注释，参考：https://stackoverflow.com/questions/12524826/why-should-i-use-deque-over-stack
  */
-public class MyStack {
+public class ArrayStack {
 
     private int[] arr;
 
     private int count;
 
-    public MyStack() {
+    public ArrayStack() {
         this.arr = new int[8];
     }
 
-    public MyStack(int oriSize) {
+    public ArrayStack(int oriSize) {
         this.arr = new int[oriSize];
     }
 

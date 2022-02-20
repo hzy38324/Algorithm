@@ -1,6 +1,6 @@
 package com.nitzsch.algorithm.test;
 
-import com.nitzsch.algorithm.MyStack;
+import com.nitzsch.algorithm.ArrayStack;
 
 /**
  * @author: nitzschhong
@@ -12,27 +12,27 @@ public class StackTest {
     }
 
     private static void testStack_1() {
-        MyStack myStack = new MyStack(4);
-        assert myStack.count() == 0;
-        assert myStack.capacity() == 4;
+        ArrayStack arrayStack = new ArrayStack(4);
+        assert arrayStack.count() == 0;
+        assert arrayStack.capacity() == 4;
 
-        myStack.push(0);
-        assert myStack.count() == 1;
-        assert myStack.capacity() == 4;
+        arrayStack.push(0);
+        assert arrayStack.count() == 1;
+        assert arrayStack.capacity() == 4;
 
-        myStack.push(1);
-        assert myStack.count() == 2;
-        int pop_1 = myStack.pop();
+        arrayStack.push(1);
+        assert arrayStack.count() == 2;
+        int pop_1 = arrayStack.pop();
         assert pop_1 == 1;
-        assert myStack.count() == 1;
-        assert myStack.capacity() == 4;
+        assert arrayStack.count() == 1;
+        assert arrayStack.capacity() == 4;
 
-        myStack.push(1);
-        myStack.push(2);
-        assert myStack.count() == 3;
-        myStack.push(3);
+        arrayStack.push(1);
+        arrayStack.push(2);
+        assert arrayStack.count() == 3;
+        arrayStack.push(3);
         try {
-            myStack.push(4);
+            arrayStack.push(4);
         } catch (Exception e) {
             System.out.println("yes! exception");
         }
