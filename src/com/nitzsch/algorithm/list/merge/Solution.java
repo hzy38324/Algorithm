@@ -24,7 +24,7 @@ public class Solution {
             }
             cur = cur.next;
         }
-        cur.next = null != list1 ? list1 : list2;
+        cur.next = null == list1 ? list2 : list1;
         return vhead.next;
     }
 
