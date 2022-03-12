@@ -1,4 +1,4 @@
-package com.nitzsch.algorithm;
+package com.nitzsch.algorithm.array;
 
 import java.util.ArrayDeque;
 import java.util.Stack;

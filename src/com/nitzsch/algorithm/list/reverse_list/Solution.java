@@ -1,4 +1,4 @@
-package com.nitzsch.algorithm.list.reverse;
+package com.nitzsch.algorithm.list.reverse_list;
 
 import com.nitzsch.algorithm.list.ListNode;
 

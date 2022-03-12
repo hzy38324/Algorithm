@@ -1,4 +1,4 @@
-package com.nitzsch.algorithm;
+package com.nitzsch.algorithm.array;
 
 /**
  * 动态数组

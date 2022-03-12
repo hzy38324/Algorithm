@@ -1,4 +1,4 @@
-package com.nitzsch.algorithm.list.merge;
+package com.nitzsch.algorithm.list.merge_list;
 
 import com.nitzsch.algorithm.list.ListNode;
 

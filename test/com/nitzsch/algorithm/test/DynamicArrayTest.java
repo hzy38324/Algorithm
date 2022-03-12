@@ -1,6 +1,6 @@
 package com.nitzsch.algorithm.test;
 
-import com.nitzsch.algorithm.DynamicArray;
+import com.nitzsch.algorithm.array.DynamicArray;
 
 import java.util.ArrayList;
 

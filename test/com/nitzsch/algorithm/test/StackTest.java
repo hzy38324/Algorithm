@@ -1,6 +1,6 @@
 package com.nitzsch.algorithm.test;
 
-import com.nitzsch.algorithm.ArrayStack;
+import com.nitzsch.algorithm.array.ArrayStack;
 
 /**
  * @author: nitzschhong

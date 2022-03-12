@@ -1,4 +1,4 @@
-package com.nitzsch.algorithm.list.FindKthToTail;
+package com.nitzsch.algorithm.list.find_kth;
 
 import com.nitzsch.algorithm.list.ListNode;
 

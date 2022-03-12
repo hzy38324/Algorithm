@@ -1,9 +1,6 @@
 package com.nitzsch.java.java8;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 import static java.util.Comparator.comparingInt;
 
@@ -33,5 +30,12 @@ public class LambdaDemo {
 //        words.sort(comparingInt(String::length));
 
         words.forEach(s -> System.out.println(s));
+
+        Map<String, Integer> map = new HashMap<>();
+        String key = "key";
+        map.put(key, 3);
+//        map.merge(key, 1, (oldValue, incr) -> oldValue + incr);
+        map.merge(key, 1, Integer::sum);
+        System.out.println(map.get(key));
     }
 }
