@@ -4,7 +4,7 @@ package com.nitzsch.algorithm.sort.merge_sort;
  * @author: nitzschhong
  * @create: 2022-03-12 11:03
  */
-public class Solution {
+public class MergeSort {
 
     public void mergeSort(int[] arr) {
         mergeSortR(arr, 0, arr.length - 1);

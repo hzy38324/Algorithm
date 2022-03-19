@@ -1,6 +1,6 @@
 package com.nitzsch.algorithm.test;
 
-import com.nitzsch.algorithm.sort.merge_sort.Solution;
+import com.nitzsch.algorithm.sort.merge_sort.MergeSort;
 
 import java.util.Arrays;
 
@@ -11,7 +11,7 @@ import java.util.Arrays;
 public class MergeSortTest {
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
+        MergeSort solution = new MergeSort();
         int a[] = {51, 46, 20, 18, 65, 97, 82, 30, 77, 50};
         solution.mergeSort(a);
         System.out.println("排序结果：" + Arrays.toString(a));
