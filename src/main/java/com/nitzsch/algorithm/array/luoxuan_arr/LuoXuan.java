@@ -1,4 +1,4 @@
-package com.nitzsch.java.luoxuan_arr;
+package com.nitzsch.algorithm.array.luoxuan_arr;
 
 /**
  * @author: nitzschhong

@@ -1,4 +1,4 @@
-package com.nitzsch.java.quan_pai_lie;
+package com.nitzsch.algorithm.array.quan_pai_lie;
 
 import java.util.ArrayList;
 import java.util.List;
