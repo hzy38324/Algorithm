@@ -6,11 +6,7 @@ package com.nitzsch.java.others;
  */
 public class Test {
     public static void main(String[] args) {
-        int i = 1000000000;
-        i = i + i;
-        i = i + i;
-        i = i + i;
-        int j = Integer.MAX_VALUE;
-        System.out.println("jj");
+        String s = "hi you are";
+        System.out.println(s.indexOf("you"));
     }
 }
