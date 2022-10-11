@@ -6,7 +6,11 @@ package com.nitzsch.java.others;
  */
 public class Test {
     public static void main(String[] args) {
-        String s = "hi you are";
-        System.out.println(s.indexOf("you"));
+        try {
+            String s = "hi you are";
+            System.out.println(s.indexOf("you"));
+        } catch (Exception e) {
+            throw e;
+        }
     }
 }
