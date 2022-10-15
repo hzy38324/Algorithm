@@ -7,7 +7,7 @@ package com.nitzsch.algorithm.dynamic_programming;
  * @author: nitzschhong
  * @create: 2022-04-17 11:47
  */
-public class BagV3 {
+public class Bag_01_V2 {
 
     public static void main(String[] args) {
         int[] weight = {1, 3, 4};
@@ -16,6 +16,12 @@ public class BagV3 {
         testWeightBagProblem(weight, value, bagSize);
     }
 
+    /**
+     * 01背包 一维数组实现【推荐】
+     * @param weight
+     * @param value
+     * @param bagSize
+     */
     public static void testWeightBagProblem(int[] weight, int[] value, int bagSize) {
         int wLen = weight.length;
         //定义dp数组：dp[j]表示背包容量为j时，能获得的最大价值
