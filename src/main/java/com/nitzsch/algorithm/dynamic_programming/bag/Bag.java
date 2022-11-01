@@ -1,4 +1,4 @@
-package com.nitzsch.algorithm.dynamic_programming;
+package com.nitzsch.algorithm.dynamic_programming.bag;
 
 /**
  * @author: nitzschhong
