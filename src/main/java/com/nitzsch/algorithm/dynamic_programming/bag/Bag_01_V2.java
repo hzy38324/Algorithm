@@ -31,6 +31,9 @@ public class Bag_01_V2 {
         // 初始化
         // 默认是0，无需写初始化代码
 
+        /**
+         * 这道题的图解 可以参考 flomo https://v.flomoapp.com/mine/?memo_id=NDM4ODM5MDc
+         */
         // 遍历顺序：先遍历物品，再遍历背包容量【为什么不能颠倒？debug理解下！】
         for (int i = 0; i < wLen; i++) {
             // 倒序遍历是为了保证物品i只被放入一次！一旦正序遍历了，那么物品0就会被重复加入多次！【为什么不能颠倒？debug理解下！】
@@ -42,11 +45,13 @@ public class Bag_01_V2 {
                 dp[j] = Math.max(dp[j], dp[j - weight[i]] + value[i]);
                 print(bagSize, dp);
             }
-            // 正序遍历，会出现重复放入物品，导致最后结果比正确结果大！
+            // 正序遍历，会出现重复拿物品，不适用于01背包，会导致最后结果比正确结果大！
+            // 原因：背包大小从小到大遍历，那么小背包的dp已经是拿了物品的计算结果，结合递归公式，大背包依赖了小背包的结果，所以会重复拿物品
 //            for (int j = weight[i]; j <= bagSize; j++) {
 //                dp[j] = Math.max(dp[j], dp[j - weight[i]] + value[i]);
 //                print(bagSize, dp);
 //            }
+            System.out.println("======");
         }
         print(bagSize, dp);
     }
