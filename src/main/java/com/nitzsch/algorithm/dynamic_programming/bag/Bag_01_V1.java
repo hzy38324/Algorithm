@@ -1,6 +1,7 @@
 package com.nitzsch.algorithm.dynamic_programming.bag;
 
 /**
+ * 01背包 二维数组实现（不推荐）
  * https://programmercarl.com/%E8%83%8C%E5%8C%85%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%8001%E8%83%8C%E5%8C%85-1.html#%E5%85%B6%E4%BB%96%E8%AF%AD%E8%A8%80%E7%89%88%E6%9C%AC
  * @author: nitzschhong
  * @create: 2022-04-17 11:47
